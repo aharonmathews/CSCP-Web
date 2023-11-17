@@ -1,11 +1,21 @@
 @import './styles/tailwind.css';
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/images/backg.jpg');
+  min-height: 100vh; /* Set a min-height instead of height */
+  overflow: hidden;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-attachment: fixed;
+}

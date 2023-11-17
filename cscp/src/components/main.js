@@ -48,9 +48,7 @@ function Main(){
 
   return (
     <section className="banner" id="home">
-      <Container>
-        <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
+      <Container className="text-center">
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
@@ -60,9 +58,6 @@ function Main(){
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
-          </Col>
-          
-        </Row>
       </Container>
     </section>
   )
