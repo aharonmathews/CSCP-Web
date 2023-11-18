@@ -10,7 +10,7 @@ body {
 }
 
 .background {
-  margin: 0;
+  margin: 1;
   padding: 0;
   background-image: url('./assets/images/backg.jpg');
   min-height: 100vh; /* Set a min-height instead of height */
