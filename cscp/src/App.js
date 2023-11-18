@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import backg from "./assets/images/backg.jpg"
 

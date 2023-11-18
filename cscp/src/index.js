@@ -3,14 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Main from './components/main'
-import backg from "./assets/images/backg.jpg"
+import Main from './components/main';
+import Navbar from './components/navbar';
+import Parallax from './components/parallax';
+import Imgone from './components/parcomp/img1'
+import backg from "./assets/images/backg.jpg";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='background'>
   <React.StrictMode>
+    <Navbar />
     <App />
+    <Imgone />
     <Main />
   </React.StrictMode>
   </div>
