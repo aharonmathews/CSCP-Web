@@ -1,13 +1,19 @@
 import React from 'react';
-import {Parallax} from 'react-parallax';
-import lap from '../../assets/images/lap1.jpg'
+import {Parallax,Background} from 'react-parallax';
+import code2 from '../../assets/images/image3.jpg'
+
 
 
 function Img(){
     return (
-        <Parallax className='image' bgImage={lap} strength={300}>
-            <div className='content'>
-                <span className='text'>Experience the depth of Programming</span>
+        <Parallax className=' items-center' strength={500}>
+            <Background className='image'>
+                <img className='image' src={code2} alt='new' />
+            </Background>
+            <div className='content text-3xl border-2 '>
+                <div className='bg-[#efeeee] p-1'>
+                    Experience the depth of Programming
+                </div>
             </div>
         </Parallax>
     )

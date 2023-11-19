@@ -1,13 +1,17 @@
 import React from 'react';
-import {Parallax} from 'react-parallax';
+import {Parallax,Background} from 'react-parallax';
 import code from '../../assets/images/code1.jpg'
+
 
 
 function Img(){
     return (
-        <Parallax className='image' bgImage={code} strength={300}>
+        <Parallax strength={500}>
+            <Background className='image'>
+                <img className='image' src={code} alt='new' />
+            </Background>
             <div className='content'>
-                <span className='text'>Experience the depth of Programming</span>
+                <div className='text-content'>Experience the depth of Programming</div>
             </div>
         </Parallax>
     )

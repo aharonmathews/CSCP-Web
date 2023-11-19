@@ -5,16 +5,25 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Main from './components/main';
 import Navbar from './components/navbar';
+import Imgone from './components/parcomp/img1'
 import Parallax from './components/parallax';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div className=''>
+  <div className='background'>
   <React.StrictMode>
     <Navbar />
-    <App />
-    <Parallax />
+    
+    <section id="section1">
     <Main />
+    <Imgone />
+    </section>
+    <section id="section2">
+      <Parallax />
+    </section>
+    
+    
+    
   </React.StrictMode>
   </div>
 );
