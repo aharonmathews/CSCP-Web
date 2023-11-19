@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Main from './components/main';
 import Navbar from './components/navbar';
 import Parallax from './components/parallax';
+import Team from './components/team';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
     <Navbar />
     <App />
     <Parallax />
+    <Team />
     <Main />
   </React.StrictMode>
   </div>

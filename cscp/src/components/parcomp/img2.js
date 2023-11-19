@@ -7,7 +7,7 @@ function Img(){
     return (
         <Parallax className='image' bgImage={code} strength={300}>
             <div className='content'>
-                <span className='text'>Experience the depth of Programming</span>
+                <span className='text' id="img2">Experience the depth of Programming</span>
             </div>
         </Parallax>
     )
