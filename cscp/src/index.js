@@ -5,28 +5,26 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Main from './components/main';
 import Navbar from './components/navbar';
+import Team from './components/team';
 import Parallax from './components/parallax';
 import Contact from './components/ContactPage'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div className='background'>
-  <React.StrictMode>
+  <div>
     <Navbar />
-    
-    <section id="section1">
-
+    <div id="section1">
       <Main />
-    </section>
-    <section id="section2">
+    </div>
+    <div id="section2">
+      <Team />
+    </div>
+    <div id="section3">
       <Parallax />
-    </section>
-    <section id="section3">
+    </div>
+    <div id="section4">
       <Contact />
-    </section>
-    
-    
-  </React.StrictMode>
+    </div>
   </div>
 );
 

@@ -1,7 +1,6 @@
 import React from 'react';
-import {Parallax, Background} from 'react-parallax';
-import black from '../../assets/images/image1.jpg'
-
+import {Parallax,Background} from 'react-parallax';
+import black from '../../assets/images/lap1.jpg'
 
 
 function Img(){
@@ -11,7 +10,7 @@ function Img(){
                 <img className='image' src={black} alt='new' />
             </Background>
             <div className='content'>
-                <span className='text-content'>Experience the depth of Programming</span>
+                <span className='text'>Experience the depth of Programming</span>
             </div>
         </Parallax>
     )
