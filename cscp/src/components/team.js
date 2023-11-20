@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import LazyLoad from 'react-lazyload';
 
 import MyImage from '../assets/images/johnny.jpg';
 import MyImage2 from '../assets/images/alyx.jpg';
@@ -11,7 +12,6 @@ function Team() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-
 
   const teamMembers = [
     {
@@ -92,6 +92,8 @@ function Team() {
         ],
       },
 
+
+
   ];
 
   return (
@@ -99,9 +101,11 @@ function Team() {
       <div className="container">
         <div className="row">
           {teamMembers.map((member, index) => (
-            <div key={index} className=" flex col-sm-6 col-md-4 justify-center">
+            <div key={index} className="flex col-sm-6 col-md-4 justify-center">
               <div className="team-item w-64" data-aos="flip-left">
-                <img src={member.image} className="team-img" alt="pic" />
+                <LazyLoad height={200} offset={100}>
+                  <img src={member.image} className="team-img" alt="pic" />
+                </LazyLoad>
                 <h3>{member.name}</h3>
                 <div className="team-info">
                   <p>{member.role}</p>
