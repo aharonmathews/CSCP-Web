@@ -35,7 +35,7 @@
   }
 
   .team-item{
-    background: #e00606;
+    background: #c2b2b4;
     text-align :center;
     margin: 20px 0;
     padding: 50px 20px 40px 20px;
@@ -52,13 +52,11 @@
   }
 
   .team-item:hover{
-    background: blue;
+    background: #53687e;
     color: white;
   }
 
   .team-item h3 {
-    margin: 20px 0 1px 0 !important;
-    color: red;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
@@ -71,9 +69,7 @@
     white-space: pre-line;
   }
 
-  .team-item:hover h3{
-    color: black;
-  }
+  
 
   .team-info{
     display: block;
@@ -109,10 +105,11 @@
 
   .team-img {
     max-width: 140px;
+    max-height: 140px;
     padding: 6px 6px;
     background-color: wheat;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
     border-radius: 50%;
   }
 

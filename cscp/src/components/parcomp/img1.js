@@ -1,6 +1,6 @@
 import React from 'react';
 import {Parallax,Background} from 'react-parallax';
-import black from '../../assets/images/lap1.jpg'
+import black from '../../assets/images/img.png'
 
 
 function Img(){

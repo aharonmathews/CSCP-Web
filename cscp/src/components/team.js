@@ -97,16 +97,15 @@ function Team() {
   ];
 
   return (
-    <section className="section-white">
       <div className="container">
-        <div className="row">
+        <div className="flex flex-wrap justify-center space-x-4">
           {teamMembers.map((member, index) => (
-            <div key={index} className="flex col-sm-6 col-md-4 justify-center">
-              <div className="team-item w-64" data-aos="flip-left">
+            <div key={index} className="">
+              <div className="team-item hover:text-[#f5dddd] rounded-md hover:bg-[#53687e] w-64 bg-[#c2b2b4]" data-aos="flip-left">
                 <LazyLoad height={200} offset={100}>
                   <img src={member.image} className="team-img" alt="pic" />
                 </LazyLoad>
-                <h3>{member.name}</h3>
+                <h3 className='hover:text-black text-[#6b4e71] mt-5 mb-0 mx-0'>{member.name}</h3>
                 <div className="team-info">
                   <p>{member.role}</p>
                   <p>{member.description}</p>
@@ -125,8 +124,7 @@ function Team() {
           ))}
         </div>
       </div>
-    </section>
-  );
+    );
 }
 
 export default Team;
