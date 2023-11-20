@@ -48,11 +48,11 @@ function Main(){
 
   return (
     <section className="banner" id="home">
-      <Container className="text-center">
+      <Container className="text-center text-white">
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Cybersecurity and Competitive Programming</span>
+                <span className="tagline text-3xl">Cybersecurity and Competitive Programming</span>
                 <h1>{``} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "CyberSecurity", "Cryptography", "Competitive Programming" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Adipoli club.</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>

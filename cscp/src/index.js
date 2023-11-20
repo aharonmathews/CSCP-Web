@@ -5,8 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Main from './components/main';
 import Navbar from './components/navbar';
-import Imgone from './components/parcomp/img1'
 import Parallax from './components/parallax';
+import Contact from './components/ContactPage'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,13 +15,15 @@ root.render(
     <Navbar />
     
     <section id="section1">
-    <Main />
-    <Imgone />
+
+      <Main />
     </section>
     <section id="section2">
       <Parallax />
     </section>
-    
+    <section id="section3">
+      <Contact />
+    </section>
     
     
   </React.StrictMode>
