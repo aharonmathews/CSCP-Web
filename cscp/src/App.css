@@ -71,14 +71,8 @@
 
   
 
-  .team-info{
-    display: block;
-    margin-bottom: 0;
-  }
-  .team-info p {
-    color: bisque;
-    font-style: italic;
-  }
+  
+  
 
   .team-info::after{
     background:blue;
@@ -101,16 +95,6 @@
     width : 5px;
     height: 3px;
     margin-top: -20px;
-  }
-
-  .team-img {
-    max-width: 140px;
-    max-height: 140px;
-    padding: 6px 6px;
-    background-color: wheat;
-    -webkit-border-radius: 20%;
-    -moz-border-radius: 20%;
-    border-radius: 50%;
   }
 
   ul.team-icon {
@@ -137,13 +121,8 @@
     line-height: 18px;
     background-color: aliceblue;
     border-radius: 50%;
-    color: blueviolet;
-  }
+    color: #6b7fd7  }
 
-  .team-img{
-    height: 200px;
-    width: 200px;
-    margin: auto;
-  }
+  
 
   

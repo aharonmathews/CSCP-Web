@@ -12,11 +12,13 @@ import Contact from './components/ContactPage'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
+    <Navbar />
+    <Main />
     <div id="section1">
-      <Main />
+    <Team />      
     </div>
     <div id="section2">
-      <Team />
+      
     </div>
     <div id="section3">
       <Parallax />

@@ -1,15 +1,6 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import Logo from '../assets/images/cscp.png';
-
-function smoothScrollTo(targetId) {
-  const targetElement = document.getElementById(targetId);
-
-  if (targetElement) {
-    targetElement.scrollIntoView({
-      behavior: 'smooth',
-    });
-  }
-}
 
 function Nav() {
   return (
@@ -17,25 +8,27 @@ function Nav() {
       <nav className='h-15 fixed w-full top-0 bg-white z-50'>
         <ul className='static flex flex-row justify-around items-center text-black'>
           <li>
-            <a href="#" onClick={() => smoothScrollTo('section1')}>
+            <Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
               <img className='h-14 w-20' src={Logo} alt="Logo" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" onClick={() => smoothScrollTo('section2')} className='text-center text-2xl font-semibold'>
+            <Link className='text-center text-2xl font-semibold' activeClass="active" to="section2" spy={true} smooth={true} offset={-70} duration={500}>
               About
-            </a>
+            </Link>
           </li>
+
           <li>
-            <a href="#" onClick={() => smoothScrollTo('section3')} className='text-center text-2xl font-semibold'>
+            <Link className='text-center text-2xl font-semibold' activeClass="active" to="section2" spy={true} smooth={true} offset={-70} duration={500}>
               Team
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" onClick={() => smoothScrollTo('section4')} className='text-center text-2xl font-semibold'>
+            <Link className='text-center text-2xl font-semibold' activeClass="active" to="section4" spy={true} smooth={true} offset={-70} duration={500}>
               Contact
-            </a>
+            </Link>
           </li>
+
         </ul>
       </nav>
     </div>

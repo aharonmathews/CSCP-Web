@@ -101,14 +101,14 @@ function Team() {
         <div className="flex flex-wrap justify-center space-x-4">
           {teamMembers.map((member, index) => (
             <div key={index} className="">
-              <div className="team-item hover:text-[#f5dddd] rounded-md hover:bg-[#53687e] w-64 bg-[#c2b2b4]" data-aos="flip-left">
+              <div className="team-item mainelement hover:text-[#f5dddd] rounded-md hover:bg-[#53687e] w-64 bg-[#c2b2b4]" data-aos="flip-left">
                 <LazyLoad height={200} offset={100}>
-                  <img src={member.image} className="team-img" alt="pic" />
+                  <img src={member.image} className="bg-[#53687e] h-[200px] max-w-[140px] max-h-[140px] w-[200px] py-1 px-1 m-auto rounded-full" alt="pic" />
                 </LazyLoad>
-                <h3 className='hover:text-black text-[#6b4e71] mt-5 mb-0 mx-0'>{member.name}</h3>
-                <div className="team-info">
-                  <p>{member.role}</p>
-                  <p>{member.description}</p>
+                <h3 className='hover:text-black mainelement-hover:text-[#c2b2b4] text-[#53687e] mt-5 mb-0 mx-0'>{member.name}</h3>
+                <div className="block mb-0 hover:text-black">
+                  <p className=''>{member.role}</p>
+                  <p className=''>{member.description}</p>
                   <ul className="team-icon">
                     {member.socials.map((social, idx) => (
                       <li key={idx}>
