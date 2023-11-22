@@ -8,9 +8,9 @@ function Nav() {
       <nav className='h-15 fixed w-full top-0 bg-white z-50'>
         <ul className='static flex flex-row justify-around items-center text-black'>
           <li>
-            <Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
+            {/* <Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
               <img className='h-14 w-20' src={Logo} alt="Logo" />
-            </Link>
+            </Link> */}
           </li>
           <li>
             <Link className='text-center text-2xl font-semibold' activeClass="active" to="section2" spy={true} smooth={true} offset={-70} duration={500}>
