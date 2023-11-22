@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import {useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
-import MyImage from '../assets/johnny.jpg';
-import MyImage2 from '../assets/alyx.jpg';
-import MyImage3 from '../assets//mia.jpg';
+import MyImage2 from '../assets/code1.jpg';
+
 
 function Team() {
   useEffect(() => {
@@ -100,8 +99,8 @@ function Team() {
         <div className="flex flex-wrap justify-center space-x-4">
           {teamMembers.map((member, index) => (
             <div key={index} className="">
-              <div className="team-item mainelement hover:text-[#f5dddd] rounded-md hover:bg-[#53687e] w-64 bg-[#c2b2b4]" data-aos="flip-left">
-                  <img src={member.image} className="bg-[#53687e] h-[200px] max-w-[140px] max-h-[140px] w-[200px] py-1 px-1 m-auto rounded-full" alt="pic" />
+              <div className="team-item mainelement hover:text-[#f5dddd] rounded-md hover:bg-[#53687e] bg-[#c2b2b4]" data-aos="flip-left">
+                  <img src={member.image} className="bg-[#53687e] h-12 w-12 py-1 px-1 m-auto rounded-full" alt="pic" height={100} width={100} />
                 
                 <h3 className='hover:text-black mainelement-hover:text-[#c2b2b4] text-[#53687e] mt-5 mb-0 mx-0'>{member.name}</h3>
                 <div className="block mb-0 hover:text-black">
