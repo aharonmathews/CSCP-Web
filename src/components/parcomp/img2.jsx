@@ -11,7 +11,7 @@ function Img(){
                 <img className='image' src={code} alt='new' />
             </Background>
             <div className='content'>
-                <span className='text'>Experience the depth of Programming</span>
+                <span className='text'>Experience depth of Programming</span>
             </div>
         </Parallax>
     )
