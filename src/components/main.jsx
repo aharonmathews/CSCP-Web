@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import TrackVisibility from 'react-on-screen';
 
@@ -9,8 +9,8 @@ function Main(){
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
-  const toRotate = [ "Maire", "Pooran", "Andi" ];
+  const [index, setIndex] = useState(3);
+  const toRotate = [ 'CyberSecurity','Competitive Programming','One Place', 'CSCP' ];
   const period = 1000;
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Main(){
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  }, )
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -47,25 +47,29 @@ function Main(){
   }
 
   return (
+    <div className="mt-12">
     <section className="banner" id="home">
       <Container className="text-center text-white">
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
-                <span className="tagline text-3xl"> Competitive Programming</span>
-                <h1>{``} 
-                <span className="txt-rotate" data-rotate='[ "CyberSecurity", "Cryptography", "Competitive Programming" ]'>
-                  <span className="wrap">
-                    {text}
-                  </span>
-                </span>
-                </h1>
-                  <p>Adipoli club.</p>
-                  <button onClick={() => console.log('connect')}>Lets Connect<ArrowRightCircle size={25} /></button>
-              </div>}
+              {
+                ({ isVisible }) =>
+                  <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
+                    <h1 className="font-sans mb-4 mt-4">{``} 
+                    <span className="txt-rotate" data-rotate='[ "CyberSecurity", "Cryptography", "Competitive Programming" ]'>
+                      <span className="wrap">
+                        {text}‎ 
+                      </span>
+                    </span>
+                    </h1>
+                      <p>Adipoli club.</p>
+                      <button onClick={() => console.log('connect')} className="text-black bg-slate-600 w-64"><ArrowRightCircle size={25} />
+                      </button>
+                  </div>
+              }
             </TrackVisibility>
       </Container>
     </section>
+    </div>
   )
 }
 
