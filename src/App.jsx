@@ -10,7 +10,7 @@ import Contact from './components/ContactPage';
 function App() {
   
   return (
-     <div>
+     <div className='bg-black'>
       <Navbar />
       <Main />
       <div id="section1">

@@ -1,5 +1,5 @@
 // ContactPage.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import './ContactPage.css';
 
@@ -21,25 +21,24 @@ const ContactPage = () => {
   };
 
   const handleSubmit = () => {
-    // Here you can implement additional logic, such as sending the form data to a server
-    // For simplicity, let's just display a confirmation message
     setConfirmation(true);
   };
 
   return (
-    <div className="contact-page text-center" style={{ color: 'white' }}>
-      <h1 className="my-special">Contact us</h1>
+    <div className="text-center text-white bg-slate-900 p-10">
+      <h1 className="my-special text-[35px] mb-2">Contact us</h1>
 
-      <div className="contact-info" style={{ color: 'yellow' }}>
-        <p className="my-special-paragraph">Contact Email: Aharonmathewswebmaster@opcoder.vazha</p>
-      </div>
-      <div>
-        <p>Please provide your contact info</p>
-      </div>
-      <br></br>
-      <form>
-        <label htmlFor="name" style={{ color: 'green' }}>Name:</label>
+      
+        <p className="text-xl text-yellow-300">Email: CSCP@CET.com</p>
+
+      
+        
+      
+      <form className='mt-2 text-green mb-4 box-border rounded-lg border-gray-300'>
+        <p className='text-xl'>Give us your suggestions!</p>
+        <label className='text-green-500 '>Name:</label>
         <input
+          className='bg-black text-green p-4 mb-4 w-{20} box-border rounded-lg border-white border-l border-r border-t border-b h-10'
           type="text"
           id="name"
           name="name"
@@ -48,8 +47,9 @@ const ContactPage = () => {
           required
         />
 
-        <label htmlFor="email" style={{ color: 'green' }}>Email:</label>
+        <label className='text-green-500'>Email:</label>
         <input
+          className='bg-black text-green p-4 mb-4 w-{20} box-border rounded-lg border-white border-l border-r border-t border-b h-10'
           type="email"
           id="email"
           name="email"
@@ -58,8 +58,9 @@ const ContactPage = () => {
           required
         />
 
-        <label htmlFor="message" style={{ color: 'green' }}>Message:</label>
+        <label className='text-green-500'>Message:</label>
         <textarea
+          className='bg-black text-green p-4 mb-4 w-{20} box-border rounded-lg border-white border-l border-r border-t border-b'
           id="message"
           name="message"
           rows="4"
@@ -68,7 +69,7 @@ const ContactPage = () => {
           required
         ></textarea>
         <div>
-          <button type="button" style={{ color: 'green' }} onClick={handleSubmit}>Submit</button>
+          <button type="button" className='text-cyan-950 bg-slate-50 text-center padding-10' onClick={handleSubmit}>Submit</button>
         </div>
       </form>
 
@@ -77,13 +78,11 @@ const ContactPage = () => {
           <p>Thank you for your message! We will get back to you soon.</p>
         </div>
       )}
-
-      {/* Social Media Icons */}
       
-    <div className="social-icons">
-      <a href="https://www.instagram.com/" target="_blank" className="icon-button"><FaInstagram /></a>
-      <a href="https://twitter.com/" target="_blank" className="icon-button"><FaTwitter /></a>
-      <a href="https://www.linkedin.com/" target="_blank" className="icon-button"><FaLinkedin /></a>
+    <div className="mt-4">
+      <a href="https://www.instagram.com/" className="inline-block text-white text-3xl p-3 hover:shadow-xl hover:shadow-color-blue-600"><FaInstagram /></a>
+      <a href="https://twitter.com/"  className="inline-block text-white text-3xl p-3 hover:shadow-xl hover:shadow-color-blue-600"><FaTwitter /></a>
+      <a href="https://www.linkedin.com/" className="inline-block text-white text-3xl p-3 hover:shadow-xl hover:shadow-color-blue-600"><FaLinkedin /></a>
     </div>
 
     </div>
