@@ -1,4 +1,4 @@
-// ContactPage.js
+
 import React, { useState } from 'react';
 import { FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import './ContactPage.css';
@@ -21,8 +21,7 @@ const ContactPage = () => {
   };
 
   const handleSubmit = () => {
-    // Here you can implement additional logic, such as sending the form data to a server
-    // For simplicity, let's just display a confirmation message
+    
     setConfirmation(true);
   };
 
@@ -38,7 +37,7 @@ const ContactPage = () => {
       </div>
       <br></br>
       <form>
-        <label htmlFor="name" style={{ color: 'green' }}>Name:</label>
+        <label htmlFor="name" className='text-black'>Name:</label>
         <input
           type="text"
           id="name"
@@ -46,9 +45,10 @@ const ContactPage = () => {
           value={formData.name}
           onChange={handleChange}
           required
+          placeholder='Name'
         />
 
-        <label htmlFor="email" style={{ color: 'green' }}>Email:</label>
+        <label htmlFor="email" className='text-black'>Email:</label>
         <input
           type="email"
           id="email"
@@ -56,9 +56,11 @@ const ContactPage = () => {
           value={formData.email}
           onChange={handleChange}
           required
-        />
+          className='text-white'
+          placeholder='Email'
+        ></input>
 
-        <label htmlFor="message" style={{ color: 'green' }}>Message:</label>
+        <label htmlFor="message" className='text-black'>Message:</label>
         <textarea
           id="message"
           name="message"
@@ -66,9 +68,11 @@ const ContactPage = () => {
           value={formData.message}
           onChange={handleChange}
           required
+          className='bg-white'
+          placeholder='Message'
         ></textarea>
         <div>
-          <button type="button" style={{ color: 'green' }} onClick={handleSubmit}>Submit</button>
+          <button type="button" className='text-black' onClick={handleSubmit}>Submit</button>
         </div>
       </form>
 
@@ -77,8 +81,6 @@ const ContactPage = () => {
           <p>Thank you for your message! We will get back to you soon.</p>
         </div>
       )}
-
-      {/* Social Media Icons */}
       
     <div className="social-icons">
       <a href="https://www.instagram.com/" target="_blank" className="icon-button"><FaInstagram /></a>

@@ -32,8 +32,8 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-  background-color: black; /* Set the background color of input boxes and textarea */
-  color: green; /* Set the text color inside input boxes and textarea */
+  background-color: white; /* Set the background color of input boxes and textarea */
+  color: black; /* Set the text color inside input boxes and textarea */
   padding: 8px; /* Add padding for better visual appearance */
   margin-bottom: 12px; /* Adjust the margin as needed */
   width: 20%; /* Ensure the input boxes and textarea span the full width */
