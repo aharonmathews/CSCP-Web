@@ -26,18 +26,17 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-page text-center" style={{ color: 'white' }}>
-      <h1 className="my-special">Contact us</h1>
+    <div className='text-center mb-10'>
+      <h1 className="text-3xl text-white mb-6">Contact us</h1>
 
       <div className="contact-info" style={{ color: 'yellow' }}>
-        <p className="my-special-paragraph">Contact Email: Aharonmathewswebmaster@opcoder.vazha</p>
+        <p className="text-white">Contact Email: aharonmathews04@gmail.com</p>
       </div>
       <div>
-        <p>Please provide your contact info</p>
+        <p className='text-white mb-6'>Please provide your contact info</p>
       </div>
-      <br></br>
-      <form>
-        <label htmlFor="name" className='text-black'>Name:</label>
+      
+      <form className='flex flex-col items-center'>
         <input
           type="text"
           id="name"
@@ -48,7 +47,6 @@ const ContactPage = () => {
           placeholder='Name'
         />
 
-        <label htmlFor="email" className='text-black'>Email:</label>
         <input
           type="email"
           id="email"
@@ -60,7 +58,6 @@ const ContactPage = () => {
           placeholder='Email'
         ></input>
 
-        <label htmlFor="message" className='text-black'>Message:</label>
         <textarea
           id="message"
           name="message"
@@ -72,7 +69,7 @@ const ContactPage = () => {
           placeholder='Message'
         ></textarea>
         <div>
-          <button type="button" className='text-black' onClick={handleSubmit}>Submit</button>
+          <button type="button" className='text-white hover' onClick={handleSubmit}>Submit</button>
         </div>
       </form>
 

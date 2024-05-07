@@ -43,16 +43,7 @@ form textarea {
 }
 
 /* Style the submit button */
-form button.button {
-  display: block; /* Make the button a block-level element */
-  background-color: black; /* Set the background color of the button */
-  color: black; /* Set the text color of the button */
-  text-align: center; /* Center-align the text inside the button */
-  padding: 10px; /* Add padding for better visual appearance */
-  margin-top: 12px; /* Adjust the margin to move the button below the input boxes */
-  border-radius: 8px; /* Set border-radius to make the corners rounded */
-  border: 1px solid #ccc; /* Add a border for better visibility */
-}
+
 
 .confirmation-message {
   color: red;

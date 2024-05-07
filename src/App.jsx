@@ -11,16 +11,18 @@ function App() {
   
   return (
      <div>
-      <Navbar />
-      <Main />
+      
+      
       <div id="section1">
-      <Team />      
+      <Navbar />
       </div>
-      <div id="section2">
-        
-      </div>
+
+      <Main className="mt-11" />
       <div id="section3">
         <Parallax />
+      </div>
+      <div id="section2">
+      <Team />  
       </div>
       <div id="section4">
         <Contact />
