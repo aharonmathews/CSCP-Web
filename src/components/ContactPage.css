@@ -6,13 +6,7 @@
   padding: 20px;
 }
 /* ContactPage.css */
-.contact-page h1 {
-  color: blue;
-}
 
-.contact-info {
-  color: green;
-}
 .my-special-paragraph {
   font-size: 24px; /* Set the font size for the text inside the <p> element with class 'my-special-paragraph' */
 }
@@ -60,7 +54,7 @@ form {
   display: inline-block;
   margin: 0 10px;
   font-size: 24px;
-  color: #333; /* Adjust the color as needed */
+  color: #BBE1FA; /* Adjust the color as needed */
 }
 
 .icon-button:hover {

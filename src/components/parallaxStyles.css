@@ -1,5 +1,18 @@
 .react-parallax-bgimage {
-    background-size: cover;
-    background-position: center;
+    
+    object-fit: cover;
+    
   }
   
+.font-jars{
+    font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-jersey{
+  font-family: "Jersey 25 Charted", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

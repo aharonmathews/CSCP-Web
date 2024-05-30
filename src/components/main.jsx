@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Container, Button } from "react-bootstrap";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import TrackVisibility from 'react-on-screen';
-import background from '../assets/img.png'
+import './parallaxStyles.css';
+
 
 function Main(){
   const [loopNum, setLoopNum] = useState(0);
@@ -42,14 +43,14 @@ function Main(){
   }
 
   return (
-    <section className="banner mt-20 mb-20" id="home">
+    <section className="banner h-screen  mt-20 mb-20" id="home">
       
-      <Container className="text-center text-[#e5c4c4]">
+      <Container className="text-center text-[#BBE1FA]">
         <div className="">
           <TrackVisibility>
             {({ isVisible }) =>
             <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
-              <span className=" tagline text-5xl text-[#7469B6] font-extrabold">CYBER SECURITY & COMPETITIVE PROGRAMMING </span>
+              <span className=" tagline text-5xl text-[#0F4C75] font-extrabold font-jersey bg-[#BBE1FA] rounded-md">CYBER SECURITY & COMPETITIVE PROGRAMMING</span>
               <div className="mt-9 h-12">
                 <span className="txt-rotate text-4xl" data-rotate='[ "CyberSecurity", "Cryptography", "Competitive Programming" ]'>
                   <span className="wrap">

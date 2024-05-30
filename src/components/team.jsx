@@ -1,15 +1,34 @@
-import {useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useEffect, useRef } from 'react';
 import { FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 import MyImage2 from '../assets/code1.jpg';
 
-
 function Team() {
+  const teamRef = useRef(null);
+
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    const teamItems = teamRef.current.querySelectorAll('.team-item');
+
+    teamItems.forEach(item => {
+      item.addEventListener('mouseenter', handleMouseEnter);
+      item.addEventListener('mouseleave', handleMouseLeave);
+    });
+
+    return () => {
+      teamItems.forEach(item => {
+        item.removeEventListener('mouseenter', handleMouseEnter);
+        item.removeEventListener('mouseleave', handleMouseLeave);
+      });
+    };
   }, []);
+
+  const handleMouseEnter = (event) => {
+    event.currentTarget.classList.add('flip-left');
+  };
+
+  const handleMouseLeave = (event) => {
+    event.currentTarget.classList.remove('flip-left');
+  };
 
   const teamMembers = [
     {
@@ -94,34 +113,37 @@ function Team() {
 
   ];
 
+
   return (
-      <div className="container">
-        <div className="flex flex-wrap justify-center space-x-4">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="">
-              <div className="team-item mainelement hover:text-[#f5dddd] rounded-md hover:bg-[#53687e] bg-[#c2b2b4]" data-aos="flip-left">
-                  <img src={member.image} className="bg-[#53687e] h-12 w-12 py-1 px-1 m-auto rounded-full" alt="pic" height={100} width={100} />
-                
-                <h3 className='hover:text-black mainelement-hover:text-[#c2b2b4] text-[#53687e] mt-5 mb-0 mx-0'>{member.name}</h3>
-                <div className="block mb-0 hover:text-black">
-                  <p className=''>{member.role}</p>
-                  <p className=''>{member.description}</p>
-                  <ul className="team-icon">
-                    {member.socials.map((social, idx) => (
-                      <li key={idx}>
-                        <a href={social.link} className="">
-                          <social.icon />
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+    <div className="my-11">
+      <div className='text-[#9AC8CD] text-5xl text-center font-bold'>
+        TEAM
+      </div>
+      <div className="flex flex-wrap justify-center space-x-4 space-y-4 " ref={teamRef}>
+        {teamMembers.map((member, index) => (
+          <div key={index} className="">
+            <div className="h-80 w-60 rounded-md m-auto p-8 hover:bg-[#BBE1FA] bg-[#3282B8]">
+              <img src={member.image} className="bg-[#9AC8CD] h-12 w-12 py-1 px-1 m-auto rounded-full" alt="pic" height={100} width={100} />
+              <h3 className='text-black mt-5 mb-0 mx-0 font-bold text-center'>{member.name}</h3>
+              <div className="mb-0 text-black text-center">
+                <p className='font-semibold'>{member.role}</p>
+                <p className=''>{member.description}</p>
+                <ul className="team-icon">
+                  {member.socials.map((social, idx) => (
+                    <li key={idx}>
+                      <a href={social.link} className="">
+                        <social.icon />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    );
+    </div>
+  );
 }
 
 export default Team;

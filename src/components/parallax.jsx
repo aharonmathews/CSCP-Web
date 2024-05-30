@@ -56,19 +56,19 @@ const ParallaxComponent = () => {
             <div className='w-full h-screen'>
                 <Container className="text-center text-[#e5c4c4] ">
                     <div className="">
-                    <TrackVisibility className=''>
+                    <TrackVisibility className='items-center text-center justify-center'>
                         {({ isVisible }) =>
                         <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
-                        <span className=" tagline text-5xl text-[#7469B6] font-extrabold">CYBER SECURITY & COMPETITIVE PROGRAMMING </span>
-                        <div className="mt-9 h-12">
-                            <span className="txt-rotate text-4xl" data-rotate='[ "CyberSecurity", "Cryptography", "Competitive Programming" ]'>
-                            <span className="wrap">
-                                {text}
-                            </span>
-                            </span>
-                        </div>
-                        <p>Eda mone.</p>
-                        <Button onClick={() => console.log('connect')} className="btn flex flex-row justify-center">Lets Connect<ArrowRightCircle size={25} /></Button>
+                            <span className=" tagline text-5xl text-[#7469B6] font-extrabold font-jars">CYBER SECURITY & COMPETITIVE PROGRAMMING </span>
+                            <div className="mt-9 h-12">
+                                <span className="txt-rotate text-4xl" data-rotate='[ "CyberSecurity", "Cryptography", "Competitive Programming" ]'>
+                                    <span className="wrap">
+                                        {text}
+                                    </span>
+                                </span>
+                            </div>
+                            <p>Eda mone.</p>
+                            <Button onClick={() => console.log('connect')} className="btn flex flex-row justify-center">Lets Connect<ArrowRightCircle size={25} /></Button>
                         </div>}
                     </TrackVisibility>
                     </div>
